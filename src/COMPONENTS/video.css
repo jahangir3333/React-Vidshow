@@ -1,0 +1,15 @@
+iframe{
+    border:2px solid grey;
+    border-radius: 20px;
+    filter:drop-shadow(0 0 5px white);
+}
+.video{
+    width:30%;
+    height:80%;
+    padding:10px;
+}
+
+.video h1{
+    text-shadow: 2px 0px 2px lightgrey;
+
+}

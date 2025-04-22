@@ -1,11 +1,12 @@
 import React from 'react'
 import Content from './Content'
+import Login from './Login'
 
 
 function Home() {
   return (
     <>
-    <Content/>
+    <Login/>
     </>
   )
 }

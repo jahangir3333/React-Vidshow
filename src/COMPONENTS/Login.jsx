@@ -1,26 +1,30 @@
 import React,{ useContext } from 'react'
-
 import { theme } from '../App'
+import Home from './Home'
+import { useNavigate } from 'react-router-dom'
 
 
 
-const handleLogin=(e)=>{
-    e.preventDefault()
-    let username=document.getElementById("username").value
-    let password=document.getElementById("password").value
-    console.log(username,password)
-    if(username==="admin" && password==="admin"){
-        alert("Login Successful")
-        window.location.href="/"
-    }
-    else{
-        alert("Invalid Credentials")
-    }
 
-}
 
 function Login() {
     const {mytheme}=useContext(theme)
+    const navigate=useNavigate()
+
+    const handleLogin=(e)=>{
+        e.preventDefault()
+        let username=document.getElementById("username").value
+        let password=document.getElementById("password").value
+        console.log(username,password)
+        if(username==="admin" && password==="admin"){
+            alert("Login Successful")
+            navigate("/content")
+        }
+        else{
+            alert("Invalid Credentials")
+        }
+    
+    }
   return (
     <div className={`form w-25 bg-${mytheme} rounded px-4 py-4 mt-5 mx-auto border border-primary border-1`}>
         <h1 className='text-primary'>Login</h1><br />

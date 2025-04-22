@@ -6,6 +6,7 @@ import { Route, Routes, BrowserRouter} from 'react-router';
 import SubmitVideo from './PAGES/SubmitVideo';
 import Home from './COMPONENTS/Home';
 import { createContext, useState } from 'react';
+import Login from './COMPONENTS/Login';
 
 const theme=createContext();
 
@@ -28,11 +29,12 @@ function App() {
     <Navbar/>
     <div className="container-fluid px-0 d-flex text-center">
     <Sidebar/>
-    <div className="container-fluid bg-secondary text-white bg-gradient px-2">
+    <div className={`container-fluid bg-${mytheme==='dark'?'dark':'warning'} text-white bg-gradient px-2`}>
       <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/about" element={<About />} />
       <Route path="/addvideo" element={<SubmitVideo />} />
+      <Route path="/login" element={<Login/>} />
 
       </Routes>
     </div>

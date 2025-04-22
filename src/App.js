@@ -8,6 +8,7 @@ import Home from './COMPONENTS/Home';
 import { createContext, useState } from 'react';
 import Login from './COMPONENTS/Login';
 import Content from './COMPONENTS/Content';
+import ShoppingHome from './COMPONENTS/SHOPPING/ShoppingHome';
 
 const theme=createContext();
 
@@ -37,7 +38,7 @@ function App() {
       <Route path="/about" element={<About />} />
       <Route path="/addvideo" element={<SubmitVideo />} />
       <Route path="/login" element={<Login/>} />
-
+      <Route path='/shopping' element={<ShoppingHome/>}/>
       </Routes>
     </div>
     </div>

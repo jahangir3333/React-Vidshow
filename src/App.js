@@ -11,9 +11,11 @@ import Content from './COMPONENTS/Content';
 import ShoppingHome from './COMPONENTS/SHOPPING/ShoppingHome';
 
 const theme=createContext();
+const shopping=createContext();
 
 function App() {
   let [mytheme,setMytheme]=useState("dark")
+  let [cart,setCart]=useState(0)
 
   const handletheme=()=>{
     if(mytheme==="dark"){
@@ -27,6 +29,7 @@ function App() {
   return (
     <>
     <theme.Provider value={{mytheme,handletheme}}>
+      <shopping.Provider value={{cart,setCart}}>
     <BrowserRouter>
     <Navbar/>
     <div className="container-fluid px-0 d-flex text-center">
@@ -43,6 +46,7 @@ function App() {
     </div>
     </div>
     </BrowserRouter>
+    </shopping.Provider>
     </theme.Provider>
     </>
   );
@@ -50,3 +54,4 @@ function App() {
 
 export default App;
 export {theme}
+export {shopping} 

@@ -42,7 +42,9 @@ function Navbar() {
         <button className="btn btn-outline-danger" type="submit">Search</button>
       </form> 
 
+        <Link to="/login">
        <button className="btn btn-primary">Login</button>
+       </Link>
     </div>
   </div>
 </nav>

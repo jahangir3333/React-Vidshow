@@ -9,7 +9,6 @@ import { createContext, useState } from 'react';
 import Login from './COMPONENTS/Login';
 import Content from './COMPONENTS/Content';
 import ShoppingHome from './COMPONENTS/SHOPPING/ShoppingHome';
-import { set } from 'react-hook-form';
 import Cart from './COMPONENTS/SHOPPING/Cart';
 
 const theme=createContext();

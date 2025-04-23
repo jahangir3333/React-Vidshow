@@ -3,6 +3,10 @@ import { Link } from 'react-router'
 import logo from '../IMAGES/logo2.png' // Assuming you have a logo.png in the assets folder
 import {theme} from '../App'
 import { shopping } from '../App'
+
+
+
+
 function Navbar() {
   let {mytheme,handletheme}=useContext(theme)
   let {cart}=useContext(shopping)
@@ -42,12 +46,11 @@ function Navbar() {
         {mytheme==='dark'?<h5>Dark Mode</h5>:<h5>Light Mode</h5>}
         </div>
 
-        <i className={`fa-solid fa-cart-shopping text-${mytheme==='dark'?'light':'dark'}`}></i><span className={`text-${mytheme==='dark'?'light':'dark'} rounded-circle bg-danger px-1`} style={{position:'relative',marginLeft:'1px',marginBottom:'20px'}}>{cart<=9&&cart>0?"0"+cart:cart}</span>
-
         
         <Link to='/cart'>
         <i className={`fa-solid fa-cart-shopping text-${mytheme==='dark'?'light':'dark'}`}></i>
         </Link>
+
         <span className={`text-${mytheme==='dark'?'light':'dark'} rounded-circle bg-primary px-1`} style={{position:'relative',marginLeft:'-3px',marginBottom:'20px'}}>{cart.length===0?" "+"0":cart.length<=9&&cart>0?"0"+cart.length:cart.length}</span>
 
       <form className="d-flex mx-4" role="search">

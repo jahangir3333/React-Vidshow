@@ -43,7 +43,7 @@ function Navbar() {
         </div>
 
         <i className={`fa-solid fa-cart-shopping text-${mytheme==='dark'?'light':'dark'}`}></i><span className={`text-${mytheme==='dark'?'light':'dark'} rounded-circle bg-danger px-1`} style={{position:'relative',marginLeft:'1px',marginBottom:'20px'}}>{cart<=9&&cart>0?"0"+cart:cart}</span>
-=======
+
         
         <Link to='/cart'>
         <i className={`fa-solid fa-cart-shopping text-${mytheme==='dark'?'light':'dark'}`}></i>

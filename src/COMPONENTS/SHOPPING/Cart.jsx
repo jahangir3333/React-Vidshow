@@ -10,7 +10,7 @@ function Cart() {
     return (
     <>
     <h1>Your Cart</h1> 
-    <button className='btn btn-warning' onClick={emptyCart}>Empty Cart</button>
+    {cart.length===0?"":<button className='btn btn-warning' onClick={emptyCart}>Empty Cart</button>}
     <div className="container-fluid d-flex flex-wrap">
 
     {cart.map(item=>{
@@ -26,7 +26,7 @@ function Cart() {
       })}
     
       </div>
-      <button className='btn btn-danger px-5 py-2'>Proceed to Checkout</button>
+      {(cart.length===0)?"":<button className='btn btn-danger px-5 py-2'>Proceed to Checkout</button>}
 
     </>
   )

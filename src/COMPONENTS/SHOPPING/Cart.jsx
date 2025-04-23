@@ -6,6 +6,7 @@ function Cart() {
  let {cart,emptyCart}=useContext(shopping)
  let {mytheme}=useContext(theme)
  
+ 
  console.log(cart)
     return (
     <>

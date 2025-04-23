@@ -33,6 +33,7 @@ function Navbar() {
           <Link className="nav-link" to="/shopping">Shopping Page</Link>
         </li>
       </ul>
+      
 
       {/* <h3 className='text-white mx-3'>{showpath===""?"HOME":showpath}</h3> */}
     

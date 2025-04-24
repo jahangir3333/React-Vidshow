@@ -1,8 +1,10 @@
 import axios from 'axios'
 import React from 'react'
 import { useForm } from 'react-hook-form'
-
+import { shopping } from '../App'
 function SubmitVideo() {
+
+  let {handleProductAdd}=React.useContext(shopping)
 // let [name,setName]=React.useState('')
 // let [email,setEmail]=React.useState('')
 // let [password,setPassword]=React.useState('')
@@ -30,9 +32,10 @@ const submitHandle=(data)=>{
 
   return (
     <>
-    <div className="container">
+    <div className="container d-flex">
+    <form action="" onSubmit={handleSubmit(submitHandle)} className='w-50 mx-4'>
     <h1>Add Videos</h1>
-    <form action="" onSubmit={handleSubmit(submitHandle)}>
+
     <input type="text" name='name' placeholder='Enter Full Name' {...register("name")}/>{errors.name}<br /><br />
     <input type="email" name='email' placeholder='Enter Email' {...register("email")}/>{errors.email}<br /><br />
     <input type="password" name='password' placeholder='Enter Password' {...register("password")} />{errors.password}<br /><br />
@@ -54,7 +57,22 @@ const submitHandle=(data)=>{
         <input type="radio" name='gender' value='Female' {...register("gender")}/>{errors.gender}
         <label htmlFor="Female">Female</label><br /><br />
         <input type="submit" value="Add Video" />
-    </form>    
+    </form> 
+
+
+    <div className="addproduct w-50 mx-4">
+      <h1>Add Product</h1>
+      <form action="" onSubmit={handleProductAdd}>
+      <input type="text" placeholder='Product Id' /><br /><br />
+      <input type="text" placeholder='Product Name' /><br /><br />
+      <input type="text" placeholder='Product Img link' /><br /><br />
+      <input type="text" placeholder='Product Price' /><br /><br />
+      <textarea placeholder='Product Details' rows='6' cols='50' /><br /><br />
+      <input type="submit" value='Submit'/>
+
+
+      </form>
+      </div>   
     </div>   
     </>
   )

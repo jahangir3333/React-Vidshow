@@ -44,10 +44,15 @@ function App() {
  
   }
 
+
+  const handleProductAdd=(e)=>{
+
+  }
+
   return (
     <>
     <theme.Provider value={{mytheme,handletheme}}>
-      <shopping.Provider value={{cart,setCart,addCart,emptyCart}}>
+      <shopping.Provider value={{cart,setCart,addCart,emptyCart,handleProductAdd}}>
     <BrowserRouter>
     <Navbar/>
     <div className="container-fluid px-0 d-flex text-center">

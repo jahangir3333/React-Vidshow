@@ -10,6 +10,7 @@ import Login from './COMPONENTS/Login';
 import Content from './COMPONENTS/Content';
 import ShoppingHome from './COMPONENTS/SHOPPING/ShoppingHome';
 import Cart from './COMPONENTS/SHOPPING/Cart';
+import SingleProduct from './COMPONENTS/SHOPPING/SingleProduct';
 
 const theme=createContext();
 const shopping=createContext();
@@ -66,6 +67,7 @@ function App() {
       <Route path="/login" element={<Login/>} />
       <Route path='/shopping' element={<ShoppingHome/>}/>
       <Route path='/cart' element={<Cart/>}/>
+      <Route path='/singleproduct' element={<SingleProduct/>}/>
       </Routes>
     </div>
     </div>

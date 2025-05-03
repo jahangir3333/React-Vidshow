@@ -11,6 +11,7 @@ import Content from './COMPONENTS/Content';
 import ShoppingHome from './COMPONENTS/SHOPPING/ShoppingHome';
 import Cart from './COMPONENTS/SHOPPING/Cart';
 import SingleProduct from './COMPONENTS/SHOPPING/SingleProduct';
+import SubmitData from './PAGES/SubmitData';
 
 const theme=createContext();
 const shopping=createContext();
@@ -68,6 +69,8 @@ function App() {
       <Route path='/shopping' element={<ShoppingHome/>}/>
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/singleproduct' element={<SingleProduct/>}/>
+      <Route path='/backend' element={<SubmitData/>}/>
+
       </Routes>
     </div>
     </div>

@@ -31,7 +31,7 @@ function Product(props) {
   <>
     
 
-    <div className={`product p-4 bg-${mytheme==='dark'?'dark':'light'} text-${mytheme==='dark'?'light':'dark'}  rounded-4 m-2`} onClick={showproduct} style={{cursor:"pointer"}}>
+    <div className={`product p-4 bg-${mytheme==='dark'?'dark':'light'} text-${mytheme==='dark'?'light':'dark'}  rounded-4 m-2`} style={{cursor:"pointer"}}>
         <h1 ref={prodname}>{props.prodname}</h1>
         <img ref={prodimg} src={logo} alt="product img" />
         <div className="btn-add-buy">

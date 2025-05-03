@@ -28,6 +28,7 @@ const submitHandle=(data)=>{
  axios.post("http://localhost:8080/",{data:data})
   .then((res)=>{console.log(res.data.data)})
   .catch((error)=>console.log(error))
+
 }
 
   return (
